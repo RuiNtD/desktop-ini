@@ -176,10 +176,7 @@ export async function writeIni(
 export async function writeDesktopIni(file: string, ini: DesktopIni) {
   if (path.extname(file).toLowerCase() != ".ini")
     file = path.join(file, "desktop.ini");
-  const parent = path.dirname(file);
 
-  await x("attrib", ["-S", "-H", file]);
   await writeIni(file, DesktopIni.encode(ini), "utf16le", true);
-  await x("attrib", ["+S", parent]);
   await x("attrib", ["+S", "+H", file]);
 }

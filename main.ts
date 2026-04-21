@@ -3,7 +3,7 @@ import iconv from "iconv-lite";
 import * as INI from "ini";
 import assert from "node:assert";
 import { Buffer } from "node:buffer";
-import * as fs from "fs-extra";
+import * as fs from "node:fs/promises";
 import path from "node:path";
 import { x } from "tinyexec";
 import * as z from "zod";

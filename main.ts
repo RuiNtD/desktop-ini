@@ -1,6 +1,6 @@
 import chardet from "chardet";
 import iconv from "iconv-lite";
-import * as INI from "ini";
+import * as INI from "@std/ini";
 import assert from "node:assert";
 import { Buffer } from "node:buffer";
 import * as fs from "node:fs/promises";
@@ -132,14 +132,15 @@ const DesktopIni = z
   .catchall(IniValue.or(IniSection));
 export type DesktopIni = z.infer<typeof DesktopIni>;
 
-async function readIni(
+export async function readIni(
   file: string,
   defaultEncoding: string = "utf8",
-): Promise<string> {
+): Promise<Record<string, unknown>> {
   const buffer = await fs.readFile(file);
   const encoding = chardet.detect(buffer);
   const test = Buffer.from(buffer);
-  return INI.parse(iconv.decode(test, encoding || defaultEncoding));
+  const decoded = iconv.decode(test, encoding || defaultEncoding);
+  return INI.parse(decoded);
 }
 
 export async function readDesktopIni(file: string): Promise<DesktopIni> {

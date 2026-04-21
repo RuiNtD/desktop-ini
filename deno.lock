@@ -1,11 +1,16 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/ini@~0.225.2": "0.225.2",
     "npm:chardet@^2.1.1": "2.1.1",
     "npm:iconv-lite@~0.7.2": "0.7.2",
-    "npm:ini@6": "6.0.0",
     "npm:tinyexec@^1.1.1": "1.1.1",
     "npm:zod@^4.3.6": "4.3.6"
+  },
+  "jsr": {
+    "@std/ini@0.225.2": {
+      "integrity": "c70f6560dacb7e333c2f868aa09aaa4117e6618cc66c60d0b4ca716c135c8e67"
+    }
   },
   "npm": {
     "chardet@2.1.1": {
@@ -16,9 +21,6 @@
       "dependencies": [
         "safer-buffer"
       ]
-    },
-    "ini@6.0.0": {
-      "integrity": "sha512-IBTdIkzZNOpqm7q3dRqJvMaldXjDHWkEDfrwGEQTs5eaQMWV+djAhR+wahyNNMAa+qpbDUhBMVt4ZKNwpPm7xQ=="
     },
     "safer-buffer@2.1.2": {
       "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
@@ -32,9 +34,9 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/ini@~0.225.2",
       "npm:chardet@^2.1.1",
       "npm:iconv-lite@~0.7.2",
-      "npm:ini@6",
       "npm:tinyexec@^1.1.1",
       "npm:zod@^4.3.6"
     ]

@@ -1,12 +1,12 @@
 {
   "name": "@ruintd/desktop-ini",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "exports": "./main.ts",
   "imports": {
+    "@std/ini": "jsr:@std/ini@^0.225.2",
     "chardet": "npm:chardet@^2.1.1",
     "iconv-lite": "npm:iconv-lite@^0.7.2",
-    "ini": "npm:ini@^6.0.0",
     "tinyexec": "npm:tinyexec@^1.1.1",
     "zod": "npm:zod@^4.3.6"
   }

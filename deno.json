@@ -1,0 +1,15 @@
+{
+  "name": "@ruintd/desktop-ini",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": "./main.ts",
+  "imports": {
+    "@types/fs-extra": "npm:@types/fs-extra@^11.0.4",
+    "chardet": "npm:chardet@^2.1.1",
+    "fs-extra": "npm:fs-extra@^11.3.4",
+    "iconv-lite": "npm:iconv-lite@^0.7.2",
+    "ini": "npm:ini@^6.0.0",
+    "tinyexec": "npm:tinyexec@^1.1.1",
+    "zod": "npm:zod@^4.3.6"
+  }
+}
